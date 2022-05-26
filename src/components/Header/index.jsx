@@ -64,7 +64,7 @@ function Header() {
                 </PLogo>
             </MainNavLogo>
             <Div>
-                <MainNavItem to="/profile">Employees List</MainNavItem>
+                <MainNavItem to="/employeeList">Employees List</MainNavItem>
                 <MainNavItem to="/login">Create Employee</MainNavItem>
             </Div>
         </MainNav>
