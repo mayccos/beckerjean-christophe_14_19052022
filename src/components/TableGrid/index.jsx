@@ -52,15 +52,15 @@ const TableGrid = () => {
     )
 
     const columnDefs = [
-        { headerName: 'First Name', field: 'firstName' },
-        { headerName: 'LastName', field: 'lastName' },
-        { headerName: 'Date of Birth', field: 'dateOfBirth' },
-        { headerName: 'Street', field: 'street' },
-        { headerName: 'City', field: 'city' },
-        { headerName: 'State', field: 'state' },
-        { headerName: 'Zip Code', field: 'zipCode' },
+        { headerName: 'First Name', field: 'firstName', width: '150' },
+        { headerName: 'LastName', field: 'lastName', width: '150' },
+        { headerName: 'Date of Birth', field: 'dateOfBirth', width: '150' },
+        { headerName: 'Street', field: 'street', width: '150' },
+        { headerName: 'City', field: 'city', width: '150' },
+        { headerName: 'State', field: 'state', width: '150' },
+        { headerName: 'Zip Code', field: 'zipCode', width: '150' },
         { headerName: 'Start Date', field: 'startDate' },
-        { headerName: 'Department', field: 'department' },
+        { headerName: 'Department', field: 'department', width: '150' },
     ]
     const rowData = JSON.parse(localStorage.getItem('employee'))
     return (

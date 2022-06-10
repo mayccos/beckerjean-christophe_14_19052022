@@ -65,7 +65,7 @@ function Header() {
             </MainNavLogo>
             <Div>
                 <MainNavItem to="/employeeList">Employees List</MainNavItem>
-                <MainNavItem to="/login">Create Employee</MainNavItem>
+                <MainNavItem to="/createEmployee">Create Employee</MainNavItem>
             </Div>
         </MainNav>
     )

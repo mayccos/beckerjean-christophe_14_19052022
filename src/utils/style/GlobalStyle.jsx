@@ -25,6 +25,24 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.birthDate, .startDate{
+    margin-left:4.5vh;
+    width:40vh;
+    height: 50px;
+    font-size: 2.5vh;
+    border-radius: 20px;
+    border: solid 2px ${colors.secondary};
+    
+}
+.startDate{
+    margin-top: 20px;
+}
+.departments{
+    margin-top: 20px;
+}
+.css-1s0hp0k-MuiDataGrid-columnHeadersInner{
+    background-color: ${colors.tertiary};
+}
 
 
 `
