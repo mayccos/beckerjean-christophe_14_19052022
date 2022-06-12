@@ -34,12 +34,8 @@ code {
     border: solid 2px ${colors.secondary};
     
 }
-.startDate{
-    margin-top: 20px;
-}
-.departments{
-    margin-top: 20px;
-}
+
+
 .css-1s0hp0k-MuiDataGrid-columnHeadersInner{
     background-color: ${colors.tertiary};
 }

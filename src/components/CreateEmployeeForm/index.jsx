@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+//import { useDispatch } from 'react-redux'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import styled from 'styled-components'
@@ -12,7 +12,7 @@ import Modal from '../Modal'
 import { states, departments } from '../../utils/optionsDropdown'
 import EmployeesData from '../../data'
 // actions
-import { createEmployee } from '../../features/employee'
+//import { createEmployee } from '../../features/employee'
 
 // Creation components that using styled-component
 const Div = styled.div`
@@ -68,7 +68,7 @@ const P = styled.p``
 function CreateEmployeeForm() {
     const [startDate, setStartDate] = useState()
     const [birthDate, setBirthDate] = useState()
-    const dispatch = useDispatch()
+    //const dispatch = useDispatch()
     const [errorMessage, setErrorMessage] = useState(false)
     const [isModalOpen, setModalOpen] = useState(false)
 
@@ -143,7 +143,9 @@ function CreateEmployeeForm() {
             state.value !== '' &&
             zipCode.value !== ''
         ) {
-            dispatch(createEmployee(newEmployee))
+            const employees = JSON.parse(localStorage.getItem('employee')) || []
+            EmployeesData.push(newEmployee)
+            employees.push(newEmployee)
 
             localStorage.setItem(
                 'employee',
@@ -179,7 +181,7 @@ function CreateEmployeeForm() {
                     className="birthDate"
                     onChange={(date) => setBirthDate(date)}
                 />
-
+                <br />
                 <Label htmlFor="start-date" className="sr-only">
                     Start Date
                 </Label>
@@ -220,6 +222,7 @@ function CreateEmployeeForm() {
                     </Label>
                     <Input type="number" id="zip-code" placeholder="Zip Code" />
                 </FieldSet>
+                <br />
 
                 <Label htmlFor="departments" className="sr-only">
                     Departments
