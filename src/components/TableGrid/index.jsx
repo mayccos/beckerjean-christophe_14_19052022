@@ -1,7 +1,8 @@
-import React, { useMemo, useState } from 'react'
+import * as React from 'react'
 import { AgGridReact } from 'ag-grid-react'
 import 'ag-grid-community/dist/styles/ag-grid.css'
 import 'ag-grid-community/dist/styles/ag-theme-balham.css'
+
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { colors } from '../../utils/style/colors'
@@ -84,21 +85,51 @@ const TableGrid = () => {
 
         set([...new Set(filterArray)])
     }
-    const containerStyle = useMemo(
+    const containerStyle = React.useMemo(
         () => ({ width: '100%', height: '100%' }),
         []
     )
 
     const columnDefs = [
-        { headerName: 'First Name', field: 'firstName', width: 150 },
-        { headerName: 'LastName', field: 'lastName', width: 150 },
-        { headerName: 'Date of Birth', field: 'dateOfBirth', width: 150 },
-        { headerName: 'Street', field: 'street', width: 150 },
-        { headerName: 'City', field: 'city', width: 150 },
-        { headerName: 'State', field: 'state', width: 150 },
-        { headerName: 'Zip Code', field: 'zipCode', width: 150 },
-        { headerName: 'Start Date', field: 'startDate', width: 150 },
-        { headerName: 'Department', field: 'department', width: 150 },
+        {
+            headerName: 'First Name',
+            field: 'firstName',
+            width: 150,
+            sortable: true,
+        },
+        {
+            headerName: 'LastName',
+            field: 'lastName',
+            width: 150,
+            sortable: true,
+        },
+        {
+            headerName: 'Date of Birth',
+            field: 'dateOfBirth',
+            width: 150,
+            sortable: true,
+        },
+        { headerName: 'Street', field: 'street', width: 150, sortable: true },
+        { headerName: 'City', field: 'city', width: 150, sortable: true },
+        { headerName: 'State', field: 'state', width: 150, sortable: true },
+        {
+            headerName: 'Zip Code',
+            field: 'zipCode',
+            width: 150,
+            sortable: true,
+        },
+        {
+            headerName: 'Start Date',
+            field: 'startDate',
+            width: 150,
+            sortable: true,
+        },
+        {
+            headerName: 'Department',
+            field: 'department',
+            width: 150,
+            sortable: true,
+        },
     ]
     let addOneUser = localStorage.getItem('employee')
 
@@ -122,11 +153,12 @@ const TableGrid = () => {
             })
         )
     }
+
     /**
      *  @description To Create a hook that is used to update the state of the table.
      */
-    const [getRows, setGetRows] = useState(rows)
-    const [searched, setSearched] = useState('')
+    const [getRows, setGetRows] = React.useState(rows)
+    const [searched, setSearched] = React.useState('')
     /**
      * @description takes a value, sets it to the state, and then filters the rows based on that value
      * @param searchedValue - The value that is the user sought.
@@ -135,6 +167,7 @@ const TableGrid = () => {
         setSearched(searchedValue)
         employeesFilter(rows, searchedValue, setGetRows)
     }
+
     return (
         <ContainerEmployee>
             <TitleEmployee>Employee List</TitleEmployee>
@@ -173,9 +206,8 @@ const TableGrid = () => {
                     className="ag-theme-balham"
                     style={{
                         margin: 'auto',
-                        height: '500px',
-                        width: '90%',
-                        borderRadius: 20,
+                        width: '85%',
+                        height: 500,
                     }}
                 >
                     <AgGridReact

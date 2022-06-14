@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 //import Component
-import TableGrid from '../../components/TableGrid'
+//import TableGrid from '../../components/TableGrid'
+import EmployeesArray from '../../components/EmployeesArray'
 //import data mocked
 import EmployeeData from '../../data'
 // Creation components that using styled-component
@@ -20,7 +21,8 @@ function EmployeesList() {
     initial()
     return (
         <ListEmployees>
-            <TableGrid />
+            {/* <TableGrid /> */}
+            <EmployeesArray />
         </ListEmployees>
     )
 }

@@ -39,8 +39,20 @@ code {
 .css-1s0hp0k-MuiDataGrid-columnHeadersInner{
     background-color: ${colors.tertiary};
 }
-
-
+.ag-theme-balham .ag-paging-panel {
+    border-top-color: ${colors.tertiary};
+    color: ${colors.tertiary}
+}
+.ag-theme-balham .ag-icon{
+    color: ${colors.tertiary};
+}
+.ag-theme-balham .ag-header{
+    border-bottom-color: ${colors.tertiary};
+    color:${colors.tertiary};
+}
+.ag-theme-balham .ag-header-cell, .ag-theme-balham .ag-header-group-cell {
+    color:${colors.tertiary};
+}
 `
 export default function GlobalStyle() {
     return <StyledGlobalStyle />
