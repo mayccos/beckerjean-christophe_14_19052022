@@ -12,8 +12,8 @@ const EmployeesData = [
         department: 'Sales',
     },
     {
-        firstName: 'Séverine',
-        lastName: 'Bizot',
+        firstName: 'Séverina',
+        lastName: 'Bizota',
         dateOfBirth: '2001/12/03',
         street: '71 avenue Lupin',
         city: 'LosAngeles',

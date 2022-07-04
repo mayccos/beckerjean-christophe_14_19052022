@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-//import { useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import styled from 'styled-components'
@@ -12,7 +12,7 @@ import Modal from '../Modal'
 import { states, departments } from '../../utils/optionsDropdown'
 import EmployeesData from '../../data'
 // actions
-//import { createEmployee } from '../../features/employee'
+import { createEmployee } from '../../features/employee'
 
 // Creation components that using styled-component
 const Div = styled.div`
@@ -51,9 +51,9 @@ const Button = styled.button`
     font-size: 2.5vh;
     border-radius: 20px;
     border: solid 2px ${colors.secondary};
+    color: ${colors.white};
+    background-color: ${colors.secondary};
     &:hover {
-        color: ${colors.white};
-        background-color: ${colors.secondary};
         transform: scale(1.4);
     }
 `
@@ -68,7 +68,7 @@ const P = styled.p``
 function CreateEmployeeForm() {
     const [startDate, setStartDate] = useState()
     const [birthDate, setBirthDate] = useState()
-    //const dispatch = useDispatch()
+    const dispatch = useDispatch()
     const [errorMessage, setErrorMessage] = useState(false)
     const [isModalOpen, setModalOpen] = useState(false)
 
@@ -143,14 +143,11 @@ function CreateEmployeeForm() {
             state.value !== '' &&
             zipCode.value !== ''
         ) {
+            dispatch(createEmployee(newEmployee))
             const employees = JSON.parse(localStorage.getItem('employee')) || []
             EmployeesData.push(newEmployee)
-            employees.push(newEmployee)
 
-            localStorage.setItem(
-                'employee',
-                JSON.stringify(EmployeesData, newEmployee)
-            )
+            localStorage.setItem('employee', JSON.stringify(employees))
 
             handleOpenModal()
             InitialState()

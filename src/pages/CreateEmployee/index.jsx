@@ -1,10 +1,12 @@
 import * as React from 'react'
+import EmployeesData from '../../data'
+//Custom and style
 import styled from 'styled-components'
 import { colors } from '../../utils/style/colors'
-// import { NavLink } from 'react-router-dom'
-// import EmployeesData from '../../data'
+
 //import components
 import CreateEmployeeForm from '../../components/CreateEmployeeForm'
+
 // Creation components that using styled-component
 const CreateEmployees = styled.main`
     min-height: 100vh;
@@ -24,9 +26,15 @@ const CreationTitle = styled.h1`
  * @returns The CreateEmployees page is being returned.
  */
 function CreateEmployee() {
+    const init = () => {
+        if (!localStorage.getItem('employee')) {
+            localStorage.setItem('employee', JSON.stringify(EmployeesData))
+        }
+    }
+    init()
     return (
         <CreateEmployees>
-            <CreationTitle>Employee information</CreationTitle>
+            <CreationTitle>Employee Information</CreationTitle>
             <CreateEmployeeForm />
         </CreateEmployees>
     )

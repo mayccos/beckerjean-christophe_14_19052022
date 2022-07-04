@@ -25,6 +25,19 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important; /* 2 */
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important; /* 3 */
+}
 .birthDate, .startDate{
     margin-left:4.5vh;
     width:40vh;
@@ -34,25 +47,10 @@ code {
     border: solid 2px ${colors.secondary};
     
 }
-
-
 .css-1s0hp0k-MuiDataGrid-columnHeadersInner{
     background-color: ${colors.tertiary};
 }
-.ag-theme-balham .ag-paging-panel {
-    border-top-color: ${colors.tertiary};
-    color: ${colors.tertiary}
-}
-.ag-theme-balham .ag-icon{
-    color: ${colors.tertiary};
-}
-.ag-theme-balham .ag-header{
-    border-bottom-color: ${colors.tertiary};
-    color:${colors.tertiary};
-}
-.ag-theme-balham .ag-header-cell, .ag-theme-balham .ag-header-group-cell {
-    color:${colors.tertiary};
-}
+
 `
 export default function GlobalStyle() {
     return <StyledGlobalStyle />

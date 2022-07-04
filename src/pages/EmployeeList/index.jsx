@@ -1,29 +1,50 @@
+import * as React from 'react'
+import { NavLink } from 'react-router-dom'
+
+//style and custom
 import styled from 'styled-components'
-//import Component
-//import TableGrid from '../../components/TableGrid'
-import EmployeesArray from '../../components/EmployeesArray'
-//import data mocked
-import EmployeeData from '../../data'
+import { colors } from '../../utils/style/colors'
+
+//import components
+import EmployeeArray from '../../components/EmployeeArray'
+
+//import data
+import EmployeesData from '../../data'
+
 // Creation components that using styled-component
-const ListEmployees = styled.main``
+const CurrentsEmployees = styled.main`
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    z-index: 10;
+`
+const EmployeesTitle = styled.h1`
+    margin-top: 2rem;
+    color: ${colors.tertiary};
+`
 
 /**
- * @description Component that show the EmployeeList page
- * @returns { HTMLElement }
+ * @description function that use EmployeeArray to display the employee list page
+ * @returns The CurrentEmployees page is being returned.
  */
-
-function EmployeesList() {
-    const initial = () => {
+function CurrentEmployees() {
+    const init = () => {
         if (!localStorage.getItem('employee')) {
-            localStorage.setItem('employee', JSON.stringify(EmployeeData))
+            localStorage.setItem('employee', JSON.stringify(EmployeesData))
         }
     }
-    initial()
+    init()
     return (
-        <ListEmployees>
-            {/* <TableGrid /> */}
-            <EmployeesArray />
-        </ListEmployees>
+        <CurrentsEmployees>
+            <EmployeesTitle>Current Employees</EmployeesTitle>
+            <EmployeeArray />
+            <NavLink to="/" style={{ color: '#5A6F08' }}>
+                Home
+            </NavLink>
+        </CurrentsEmployees>
     )
 }
-export default EmployeesList
+
+export default CurrentEmployees
