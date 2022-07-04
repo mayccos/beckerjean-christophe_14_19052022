@@ -1,11 +1,17 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
+
+// Import of library and css to use a datePicker
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
+import { DropdownComponent } from 'lycant-library'
+import 'lycant-library/dist/index.css'
+
+//Custom ans style
 import styled from 'styled-components'
 import { colors } from '../../utils/style/colors'
+
 // import components
-import Dropdown from '../Dropdown'
 import Modal from '../Modal'
 
 //import data
@@ -204,14 +210,13 @@ function CreateEmployeeForm() {
                     <Label htmlFor="states" className="sr-only">
                         States
                     </Label>
-                    <Dropdown
-                        placeholderText="States"
-                        label="States"
-                        htmlFor="state"
-                        defaultValue="Select a State..."
+                    <DropdownComponent
+                        selectName="states"
+                        defaultValue="select a state..."
                         options={states}
-                        className="states"
-                        hideLabel={true}
+                        label=""
+                        selectStyle={{ color: '#000' }}
+                        wrapperStyle={{}}
                     />
 
                     <Label htmlFor="zip-code" className="sr-only">
@@ -224,14 +229,13 @@ function CreateEmployeeForm() {
                 <Label htmlFor="departments" className="sr-only">
                     Departments
                 </Label>
-                <Dropdown
-                    placeholderText="Departments"
-                    label="Departments"
-                    htmlFor="departments"
-                    defaultValue="Select a Department..."
+                <DropdownComponent
+                    selectName="departments"
+                    defaultValue="select a department..."
                     options={departments}
-                    className="departments"
-                    hideLabel={true}
+                    label=""
+                    selectStyle={{ color: '#000' }}
+                    wrapperStyle={{}}
                 />
                 {errorMessage && (
                     <Alert role="alert">
