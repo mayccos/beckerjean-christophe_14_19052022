@@ -152,7 +152,7 @@ function CreateEmployeeForm() {
             dispatch(createEmployee(newEmployee))
             const employees = JSON.parse(localStorage.getItem('employee')) || []
             EmployeesData.push(newEmployee)
-
+            console.log(newEmployee)
             localStorage.setItem('employee', JSON.stringify(employees))
 
             handleOpenModal()
@@ -233,6 +233,7 @@ function CreateEmployeeForm() {
                         States
                     </Label>
                     <DropdownComponent
+                        data-testid="states"
                         selectName="states"
                         defaultValue="select a state..."
                         options={states}
@@ -257,6 +258,7 @@ function CreateEmployeeForm() {
                     Departments
                 </Label>
                 <DropdownComponent
+                    data-testid="departments"
                     selectName="departments"
                     defaultValue="select a department..."
                     options={departments}
