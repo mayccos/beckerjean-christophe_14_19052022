@@ -56,16 +56,23 @@ const SpanLogo = styled.span``
 
 function Header() {
     return (
-        <MainNav>
-            <MainNavLogo to="/">
+        <MainNav data-testid="header">
+            <MainNavLogo data-testid="toHome" to="/">
                 <MainNavLogoImg src={Logo} alt="WealthHealth Logo" />
                 <PLogo>
                     WEALTH HEALTH - <SpanLogo> HRnet</SpanLogo>
                 </PLogo>
             </MainNavLogo>
             <Div>
-                <MainNavItem to="/employeeList">Employees List</MainNavItem>
-                <MainNavItem to="/createEmployee">Create Employee</MainNavItem>
+                <MainNavItem data-testid="toEmployeeList" to="/employeeList">
+                    Employees List
+                </MainNavItem>
+                <MainNavItem
+                    data-testid="toCreateEmployee"
+                    to="/createEmployee"
+                >
+                    Create Employee
+                </MainNavItem>
             </Div>
         </MainNav>
     )

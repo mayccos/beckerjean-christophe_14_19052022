@@ -236,7 +236,7 @@ function CreateEmployeeForm() {
                         selectName="states"
                         defaultValue="select a state..."
                         options={states}
-                        label="states"
+                        label=""
                         selectStyle={{ color: '#000' }}
                         wrapperStyle={{}}
                     />
@@ -260,7 +260,7 @@ function CreateEmployeeForm() {
                     selectName="departments"
                     defaultValue="select a department..."
                     options={departments}
-                    label="department"
+                    label=""
                     selectStyle={{ color: '#000' }}
                     wrapperStyle={{}}
                 />
