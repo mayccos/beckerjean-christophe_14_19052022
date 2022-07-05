@@ -4,9 +4,9 @@
 
 # HRnet
 
-![HRnet](public/readMe/logo.svg)
+![HRnet](public/logo.svg)
 
-_**HRnet**_ is an internal web application of the **Wealth Health** company. The goal here was to move from a [jQuery application] (https://github.com/mayccos/HRnet.git) to a React application. Four jQuery plugins were present in the initial application :
+_**HRnet**_ is an internal web application of the **Wealth Health** company. The goal here was to move from a [jQuery application](https://github.com/mayccos/HRnet.git) to a React application. Four jQuery plugins were present in the initial application :
 
 -   [jQuery DateTimePicker](https://github.com/xdan/datetimepicker)
 -   [jQuery Select](https://github.com/jquery/jquery-ui/blob/main/ui/widgets/selectmenu.js)
@@ -24,7 +24,7 @@ All of them had to be replaced by a **React** component :
 
 -   [NodeJs (version 17.0.2)](https://nodejs.org/en/)
 -   [Yarn (version 1.22.11)](https://yarnpkg.com/)
--   Visual Studio Code or another IDE of your choice
+-   [Visual Studio Code](https://code.visualstudio.com): Or another IDE of your choice
 
 ## Installation
 

@@ -106,10 +106,10 @@ function CreateEmployeeForm() {
         const birthDate = document.querySelector('.birthDate')
         const street = document.querySelector('#street')
         const city = document.querySelector('#city')
-        const state = document.querySelector('.states')
+        const state = document.querySelector('#states')
         const zipCode = document.querySelector('#zip-code')
         const startDate = document.querySelector('.startDate')
-        const department = document.querySelector('.departments')
+        const department = document.querySelector('#departments')
 
         /**
          * @description Function that show or return to the initialState of form
@@ -164,16 +164,26 @@ function CreateEmployeeForm() {
 
     return (
         <Div>
-            <Form>
+            <Form data-testid="form">
                 <Label htmlFor="first-name" className="sr-only">
                     First Name
                 </Label>
-                <Input type="text" id="first-name" placeholder="First Name" />
+                <Input
+                    type="text"
+                    id="first-name"
+                    placeholder="First Name"
+                    data-testid="firstName"
+                />
 
                 <Label htmlFor="last-name" className="sr-only">
                     Last Name
                 </Label>
-                <Input type="text" id="last-name" placeholder="Last Name" />
+                <Input
+                    type="text"
+                    id="last-name"
+                    placeholder="Last Name"
+                    data-testid="lastName"
+                />
 
                 <Label htmlFor="birth-date" className="sr-only">
                     Date of Birth
@@ -183,6 +193,7 @@ function CreateEmployeeForm() {
                     placeholderText="Date of Birth"
                     className="birthDate"
                     onChange={(date) => setBirthDate(date)}
+                    data-testid="birthDate"
                 />
                 <br />
                 <Label htmlFor="start-date" className="sr-only">
@@ -194,18 +205,29 @@ function CreateEmployeeForm() {
                     placeholderText="Start Date"
                     className="startDate"
                     onChange={(date) => setStartDate(date)}
+                    data-testid="startDate"
                 />
                 <FieldSet>
                     <legend>Address</legend>
                     <Label htmlFor="street" className="sr-only">
                         Street
                     </Label>
-                    <Input type="text" id="street" placeholder="Street" />
+                    <Input
+                        type="text"
+                        id="street"
+                        placeholder="Street"
+                        data-testid="street"
+                    />
 
                     <Label htmlFor="city" className="sr-only">
                         City
                     </Label>
-                    <Input type="text" id="city" placeholder="City" />
+                    <Input
+                        type="text"
+                        id="city"
+                        placeholder="City"
+                        data-testid="city"
+                    />
 
                     <Label htmlFor="states" className="sr-only">
                         States
@@ -214,7 +236,7 @@ function CreateEmployeeForm() {
                         selectName="states"
                         defaultValue="select a state..."
                         options={states}
-                        label=""
+                        label="states"
                         selectStyle={{ color: '#000' }}
                         wrapperStyle={{}}
                     />
@@ -222,7 +244,12 @@ function CreateEmployeeForm() {
                     <Label htmlFor="zip-code" className="sr-only">
                         Zip Code
                     </Label>
-                    <Input type="number" id="zip-code" placeholder="Zip Code" />
+                    <Input
+                        type="number"
+                        id="zip-code"
+                        placeholder="Zip Code"
+                        data-testid="zipCode"
+                    />
                 </FieldSet>
                 <br />
 
@@ -233,7 +260,7 @@ function CreateEmployeeForm() {
                     selectName="departments"
                     defaultValue="select a department..."
                     options={departments}
-                    label=""
+                    label="department"
                     selectStyle={{ color: '#000' }}
                     wrapperStyle={{}}
                 />
@@ -246,10 +273,18 @@ function CreateEmployeeForm() {
                     </Alert>
                 )}
                 <FormButtons>
-                    <Button type="submit" onClick={saveEmployee}>
+                    <Button
+                        type="submit"
+                        onClick={saveEmployee}
+                        data-testid="saveButton"
+                    >
                         Save
                     </Button>
-                    <Button type="reset" onClick={resetInputs}>
+                    <Button
+                        type="reset"
+                        onClick={resetInputs}
+                        data-testid="resetButton"
+                    >
                         Reset
                     </Button>
                 </FormButtons>
@@ -257,6 +292,7 @@ function CreateEmployeeForm() {
                     <Modal
                         onClick={handleCloseModal}
                         message=" New employee created !"
+                        data-testid="okModal"
                     />
                 )}
             </Form>
