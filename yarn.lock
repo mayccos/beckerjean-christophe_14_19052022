@@ -6865,10 +6865,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-lycant-library@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/lycant-library/-/lycant-library-1.0.0.tgz#917a38e8db596a9d7ace6b66c05059f6b4e8d95d"
-  integrity sha512-bgXFVzLtjgwAnDr9ChVesUKWpWaVOvbm++lUF7HysRbOfX/VRUQ+aSc4h67qDhU1m3apuhJZTxKPcFYb8FXfJg==
+lycant-library@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/lycant-library/-/lycant-library-1.0.1.tgz#548ca111a3ad5f141f3ae094d4bf97cdbc7f5856"
+  integrity sha512-a9M44RiqGysDwUX+HZdd+qH+VSj0iCXZFqZ1HyMrIDt9EieMy4IW8ca+JJ9AN+cOAFcJUk28K5N8HFU09dd7ug==
 
 lz-string@^1.4.4:
   version "1.4.4"
