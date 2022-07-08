@@ -115,19 +115,18 @@ describe('When the Header component is render', () => {
             expect(lastName.value).toBe('')
             expect(startDate.value).toBe('')
             expect(zipCode.value).toBe('')
-<<<<<<< HEAD
+
             // expect(state.value).toBe('')
             expect(city.value).toBe('')
             expect(street.value).toBe('')
             expect(birthDate.value).toBe('')
             // expect(department.value).toBe('')
-=======
+
             //expect(state.value).toBe('')
             expect(city.value).toBe('')
             expect(street.value).toBe('')
             expect(birthDate.value).toBe('')
             //expect(department.value).toBe('')
->>>>>>> 8f7fcbd7fd792c44d0be47976bedf83863185e4a
         })
     })
 })

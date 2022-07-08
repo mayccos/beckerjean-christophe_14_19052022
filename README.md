@@ -18,7 +18,7 @@ All of them had to be replaced by a **React** component :
 -   [react-table](https://www.npmjs.com/package/react-table)
 -   [react-date picker](https://www.npmjs.com/package/react-datepicker)
 -   [modal ](https://github.com/beckerjean-christophe_14_19052022/src/components/Modal/index.jsx): For the modal, we created a basic react component that could be improved in the future;
--   [lycant-library ](https://www.npmjs.com/package/lycant-library): We created our dropdown library which is in its first version.
+-   [lycant-library ](https://www.npmjs.com/package/lycant-library): We created our dropdown library.
 
 ## Prerequisites
 
