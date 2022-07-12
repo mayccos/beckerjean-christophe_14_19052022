@@ -150,10 +150,12 @@ function CreateEmployeeForm() {
             zipCode.value !== ''
         ) {
             dispatch(createEmployee(newEmployee))
-            const employees = JSON.parse(localStorage.getItem('employee')) || []
+
             EmployeesData.push(newEmployee)
+
             console.log(newEmployee)
-            localStorage.setItem('employee', JSON.stringify(employees))
+
+            localStorage.setItem('employee', JSON.stringify(EmployeesData))
 
             handleOpenModal()
             InitialState()
